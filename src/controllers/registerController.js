@@ -1,15 +1,15 @@
 const renderTemplate = require('../lib/renderTemplate');
-const Main = require('../views/Main');
+const Register = require('../views/Register');
 // const { Party } = require('../../db/models');
 
-const renderMain = async (req, res) => {
+const renderReg = async (req, res) => {
   // const user = req.session?.user;
   // const UserID = req.session?.UserID;
   try {
-    renderTemplate(Main, {}, res);
+    renderTemplate(Register, {}, res);
   } catch (error) {
     console.log(error);
   }
 };
 
-module.exports = renderMain;
+module.exports = renderReg;

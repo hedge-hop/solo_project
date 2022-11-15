@@ -1,6 +1,5 @@
-require('@babel/register');
 require('dotenv').config();
-
+require('@babel/register');
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
@@ -13,6 +12,9 @@ const connectionCheck = require('../db/connectionCheck');
 
 const app = express();
 // routes' requires below
+const mainRouter = require('./routes/mainRouter');
+const loginRouter = require('./routes/loginRouter');
+const regRouter = require('./routes/registerRouter');
 
 app.use(morgan('dev'));
 
@@ -34,7 +36,9 @@ const sessionConfig = {
 
 app.use(session(sessionConfig));
 // HANDLERS
-// app.use('/', mainRouter);
+app.use('/', mainRouter);
+app.use('/login', loginRouter);
+app.use('/register', regRouter);
 
 app.listen(PORT, () => {
   connectionCheck();
