@@ -3,26 +3,24 @@ const {
 } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-  class User extends Model {
+  class AsanaAPI extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ AsanaAPI }) {
-      this.belongsToMany(AsanaAPI, { through: 'User_AsanaAPIs' });
+    static associate({ User }) {
+      this.belongsToMany(User, { through: 'User_AsanaAPIs' });
       // define association here
     }
   }
-  User.init({
-    firstname: DataTypes.STRING,
-    lastname: DataTypes.STRING,
-    cellphone: DataTypes.STRING,
-    email: DataTypes.STRING,
-    password: DataTypes.STRING,
+  AsanaAPI.init({
+    sanskrit_name: DataTypes.STRING,
+    english_name: DataTypes.STRING,
+    img_url: DataTypes.STRING,
   }, {
     sequelize,
-    modelName: 'User',
+    modelName: 'AsanaAPI',
   });
-  return User;
+  return AsanaAPI;
 };

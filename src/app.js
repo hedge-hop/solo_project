@@ -15,6 +15,9 @@ const app = express();
 const mainRouter = require('./routes/mainRouter');
 const loginRouter = require('./routes/loginRouter');
 const regRouter = require('./routes/registerRouter');
+const logoutRouter = require('./routes/logoutRouter');
+const userAccRouter = require('./routes/userAccRouter');
+const favRouter = require('./routes/favRouter');
 
 app.use(morgan('dev'));
 
@@ -39,6 +42,9 @@ app.use(session(sessionConfig));
 app.use('/', mainRouter);
 app.use('/login', loginRouter);
 app.use('/register', regRouter);
+app.use('/logout', logoutRouter);
+app.use('/userpage', userAccRouter);
+app.use('/addtofav', favRouter);
 
 app.listen(PORT, () => {
   connectionCheck();

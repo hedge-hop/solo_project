@@ -10,3 +10,32 @@
 .loginContainer {
     width: 500px;
 }
+
+.mainContainer {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    display: inline-block;
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    border: darkblue 2px solid;
+    background-color: darkslategray;
+
+}
+
+.card-body {
+    border: lightseagreen solid 2px;
+    font-size: smaller;
+}
+
+.disable {
+    pointer-events: none;
+    cursor: default;
+    color: #888;
+}

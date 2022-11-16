@@ -6,7 +6,7 @@ module.exports = function Main({ }) {
     <Layout>
 
       <div className="loginContainer">
-        <form action="/login" method="POST">
+        <form action="/login" method="POST" className="loginForm">
           <div className="row mb-3">
             <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
             <div className="col-sm-10">
@@ -22,7 +22,7 @@ module.exports = function Main({ }) {
               <a href="/changepass">Forgot password?</a>
             </div>
           </div>
-          <button type="submit" className="btn btn-primary">Log in</button>
+          <button id="loginBtn" type="submit" className="btn btn-primary">Log in</button>
         </form>
         <div className="row mb-3">
           <h7>New to YogaDev?</h7>
@@ -38,6 +38,8 @@ module.exports = function Main({ }) {
           </li>
         </ul> */}
       </div>
+      <script defer src="/js/loginScript.js" />
+      <h1>Привет из вьюшки Login</h1>
     </Layout>
   );
 };
