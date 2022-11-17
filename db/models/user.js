@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate({ AsanaAPI }) {
-      this.belongsToMany(AsanaAPI, { through: 'User_AsanaAPIs' });
+      this.belongsToMany(AsanaAPI, { through: 'User_AsanaAPIs', foreignKey: 'UserID' });
       // define association here
     }
   }

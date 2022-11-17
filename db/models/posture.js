@@ -1,28 +1,25 @@
+'use strict';
 const {
-  Model,
+  Model
 } = require('sequelize');
-
 module.exports = (sequelize, DataTypes) => {
-  class AsanaAPI extends Model {
+  class Posture extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ User, Category }) {
-      this.belongsToMany(User, { through: 'User_AsanaAPIs', foreignKey: 'AsanaAPIID' });
-      this.belongsTo(Category, { foreignKey: 'category_id' });
+    static associate(models) {
       // define association here
     }
   }
-  AsanaAPI.init({
+  Posture.init({
     sanskrit_name: DataTypes.STRING,
     english_name: DataTypes.STRING,
-    img_url: DataTypes.STRING,
-    category_id: DataTypes.INTEGER,
+    img_url: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'AsanaAPI',
+    modelName: 'Posture',
   });
-  return AsanaAPI;
+  return Posture;
 };

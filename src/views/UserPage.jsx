@@ -85,7 +85,7 @@ module.exports = function UserAcc({ user }) {
         <div className="empty" />
 
       </div>
-      <script src="/js/dragndrop.js" />
+      {/* <script src="/js/dragndrop.js" /> */}
     </Layout>
   );
 };

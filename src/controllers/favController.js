@@ -3,12 +3,14 @@ const { User_AsanaAPIs } = require('../../db/models');
 
 const addtoFav = async (req, res) => {
   try {
+    console.log('req body *******', req.body);
     if (req.body) {
       /* console.log(UserID, req.body.UserID);
       const { UserID, AsanaAPIID } = req.body; */
-      await User_AsanaAPIs.create({
+      const addedtofav = await User_AsanaAPIs.create({
         UserID: req.body.UserID, AsanaAPIID: req.body.AsanaAPIID,
       });
+      console.log('addedtofav======>', addedtofav);
       res.sendStatus(200);
     }
   } catch (error) {
