@@ -9,8 +9,9 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ AsanaAPI }) {
-      this.belongsToMany(AsanaAPI, { through: 'User_AsanaAPIs', foreignKey: 'UserID' });
+    static associate({ Posture, User_Posture }) {
+      this.belongsToMany(Posture, { through: 'User_Posture', foreignKey: 'UserID' });
+
       // define association here
     }
   }

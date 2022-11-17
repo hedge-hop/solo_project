@@ -18,6 +18,7 @@ const regRouter = require('./routes/registerRouter');
 const logoutRouter = require('./routes/logoutRouter');
 const userAccRouter = require('./routes/userAccRouter');
 const favRouter = require('./routes/favRouter');
+const allPosturesRouter = require('./routes/allPosturesRouter');
 
 app.use(morgan('dev'));
 
@@ -45,6 +46,8 @@ app.use('/register', regRouter);
 app.use('/logout', logoutRouter);
 app.use('/userpage', userAccRouter);
 app.use('/addtofav', favRouter);
+app.use('/allpostures', allPosturesRouter);
+// app.use('/addtoseq', seqRouter);
 
 app.listen(PORT, () => {
   connectionCheck();

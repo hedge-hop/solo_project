@@ -31,11 +31,8 @@ const postLogin = async (req, res) => {
         req.session.save(() => {
           res.json({
             name: user.firstname,
-            // middlename: user.middlename,
           });
         });
-        // console.log('user datavalues===>>>', user.dataValues.firstname);
-        // console.log('REQ SESSION', req.session.user.firstname);
       }
     }
   } catch (error) {

@@ -3,22 +3,22 @@ const {
 } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-  class User_AsanaAPIs extends Model {
+  class Posture_Category extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ User, AsanaAPI }) {
+    static associate(models) {
       // define association here
     }
   }
-  User_AsanaAPIs.init({
-    UserID: DataTypes.INTEGER,
-    AsanaAPIID: DataTypes.INTEGER,
+  Posture_Category.init({
+    PostureID: DataTypes.INTEGER,
+    CategoryID: DataTypes.INTEGER,
   }, {
     sequelize,
-    modelName: 'User_AsanaAPIs',
+    modelName: 'Posture_Category',
   });
-  return User_AsanaAPIs;
+  return Posture_Category;
 };

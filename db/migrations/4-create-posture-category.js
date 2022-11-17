@@ -1,26 +1,24 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('AsanaAPIs', {
+    await queryInterface.createTable('Posture_Categories', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      sanskrit_name: {
-        type: Sequelize.STRING,
-      },
-      english_name: {
-        type: Sequelize.STRING,
-      },
-      img_url: {
-        type: Sequelize.STRING,
-      },
-      category_id: {
+      PostureID: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Category',
+          model: 'Postures',
+          key: 'id',
+        },
+      },
+      CategoryID: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Categories',
           key: 'id',
         },
       },
@@ -35,6 +33,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('AsanaAPIs');
+    await queryInterface.dropTable('Posture_Categories');
   },
 };

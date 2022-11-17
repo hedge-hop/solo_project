@@ -1,7 +1,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('User_AsanaAPIs', {
+    await queryInterface.createTable('User_Postures', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -15,10 +15,10 @@ module.exports = {
           key: 'id',
         },
       },
-      AsanaAPIID: {
+      PostureID: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'AsanaAPIs',
+          model: 'Postures',
           key: 'id',
         },
       },
@@ -33,6 +33,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('User_AsanaAPIs');
+    await queryInterface.dropTable('User_Postures');
   },
 };
