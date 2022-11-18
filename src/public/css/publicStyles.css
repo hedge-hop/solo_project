@@ -42,19 +42,34 @@
 }
 
 .main-nouser-pic {
+
+    display: flex;
     height: auto;
     width: 100%;
     max-width: 720px;
-    margin: 150px;
+    margin: 0;
     border-radius: 5%;
     border: 1px solid red;
+    position: relative;
+    left: 50%;
 }
 
 .main-user-pic {
     height: auto;
     width: 100%;
     max-width: 850px;
-    margin: 50px;
+    margin: 0;
+    /* margin-bottom: 25px; */
+    margin-left: 20px;
+    border-radius: 5%;
+    border: 1px solid lightcoral;
+}
+
+.carouselContainer {
+    height: auto;
+    width: 100%;
+    max-width: 850px;
+    /* margin: 50px; */
     margin-left: 20px;
     border-radius: 5%;
     border: 1px solid lightcoral;
@@ -71,16 +86,19 @@ body {
 }
 
 .welcomeTxtBox {
-    display: block;
-    margin-left: 150px;
-    margin-top: 50px;
-    width: 200px;
+    display: flex;
+    margin: 20px;
+    width: max-content;
     position: relative;
+    border: 1px solid black;
+    padding: 10%;
+    border-radius: 50%;
+
 }
 
 .divider {
     border: 1px solid lightcoral;
-    height: 100px;
+    height: 200px;
     width: 100%;
     max-width: 850px;
     background-color: rgba(207, 173, 19, 0.973);
@@ -88,6 +106,8 @@ body {
     border-right: transparent;
     text-align: center;
     position: relative;
+    margin: 50px;
+    margin-left: 20px;
 
 }
 
@@ -104,14 +124,6 @@ body {
     vertical-align: bottom;
 }
 
-.loginContainer {
-    height: auto;
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 850px;
-
-}
 
 .userAccContainer {
     height: 400px;
@@ -130,3 +142,92 @@ body {
     width: 380px;
     top: 0;
 }
+
+.car-pic {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    max-width: 850px;
+    margin: 5px;
+    background-color: deepskyblue;
+
+}
+
+
+.cat-text {
+    font-variant: small-caps;
+    color: whitesmoke;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.cat-text-name {
+    font-variant: small-caps;
+    color: red;
+    font-size: xx-large;
+    font-weight: bolder;
+
+}
+
+.carousel-item {
+    background-color: rgba(207, 173, 19, 0.973);
+    opacity: 50%;
+
+}
+
+
+.cat-img {
+    height: 250px;
+    width: 250px;
+}
+
+.registerForm {
+    background-color: rgb(209, 173, 54);
+    opacity: 90%;
+}
+
+.regContainer {
+    height: 400px;
+    width: auto;
+    max-width: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+
+.loginContainer {
+    background-color: transparent;
+    height: auto;
+    width: auto;
+    max-width: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+
+.loginForm {
+    height: auto;
+    width: 500px;
+    background-color: transparent;
+    opacity: 90%;
+
+}
+
+.loginpic {
+    width: 500px;
+    margin-bottom: 20px;
+
+}
+
+/* .loginContainer {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 850px;
+
+} */

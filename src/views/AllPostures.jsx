@@ -8,6 +8,10 @@ module.exports = function AllPostures({ user, allPoses }) {
         <div>
           <img src="https://cdn.dribbble.com/users/406059/screenshots/5254513/media/d182024c546f188ab255a34229374f7a.gif" alt="mainpic" className="main-user-pic" />
         </div>
+
+        {/* <div>
+          <img src="https://cdn.dribbble.com/users/406059/screenshots/5254513/media/d182024c546f188ab255a34229374f7a.gif" alt="mainpic" className="main-user-pic" />
+        </div> */}
         <div className="divider">
           <h2 className="divide-text">All yoga postures</h2>
         </div>
@@ -29,6 +33,7 @@ module.exports = function AllPostures({ user, allPoses }) {
         </div>
       </div>
       <script defer src="/js/addFavScript.js" />
+
       {/* <script defer src="/js/chooseFromAll.js" /> */}
       {/* <script defer src="/js/dragndrop.js" /> */}
     </Layout>

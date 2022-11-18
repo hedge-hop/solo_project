@@ -4,7 +4,7 @@ const Layout = require('./Layout');
 module.exports = function Main({ }) {
   return (
     <Layout>
-      <div className="loginContainer">
+      <div className="regContainer">
         {/*  <form action="/login" method="POST">
           <div className="row mb-3">
             <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
@@ -16,7 +16,16 @@ module.exports = function Main({ }) {
             <button type="submit" className="btn btn-primary">Send</button>
           </div>
         </form> */}
-        <h3>Registration form:</h3>
+
+        <div>
+          <img className="useraccpic" src="https://cdn.dribbble.com/users/1674522/screenshots/13992617/media/0c774bc16627701b52f2c077e3e96105.png?compress=1&resize=400x300&vertical=top" alt="regpic" />
+        </div>
+        <br />
+        <hr />
+        <div>
+          <h3>Registration form:</h3>
+        </div>
+
         <form action="/register" method="POST" className="registerForm">
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">First name</label>

@@ -19,7 +19,9 @@ container.addEventListener('click', async (e) => {
         addBtn.innerHTML = 'Added';
         alert('Added to your favourites!');
       } else {
-        alert('Fail to add');
+        const addBtn = e.target;
+        addBtn.setAttribute('disabled', true);
+        alert('You already have one in your favorites');
       }
     }
   } catch (error) {

@@ -47,6 +47,7 @@ app.use('/login', loginRouter);
 app.use('/register', regRouter);
 app.use('/logout', logoutRouter);
 app.use('/userpage', userAccRouter);
+app.use('/userpage', favRouter);
 app.use('/addtofav', favRouter);
 app.use('/allpostures', allPosturesRouter);
 app.use('/allcategories', catRouter);

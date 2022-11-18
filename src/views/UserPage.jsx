@@ -6,7 +6,8 @@ module.exports = function UserAcc({ user, favPos }) {
     <Layout user={user} favPos={favPos}>
       <link rel="stylesheet" href="/css/styles.css" />
       <script defer src="/js/dragndrop.js" />
-      <script defer src="/js/addToSeq.js" />
+      <script defer src="/js/deleteFav.js" />
+      {/* <script defer src="/js/addToSeq.js" /> */}
 
       <nav>
         <div className="nav nav-tabs" id="nav-tab" role="tablist">
@@ -64,7 +65,7 @@ module.exports = function UserAcc({ user, favPos }) {
           <div className="fav-container">
             <div className="mainContainer">
               {favPos.map((el) => (
-                <div id={el.id} className="oneAsanaCard">
+                <div id={`posture${el.id}`} className="oneAsanaCard">
                   <div className="card">
                     <img src={el.img_url} className="card-img-top" alt="pic" />
                     <div className="card-body">
