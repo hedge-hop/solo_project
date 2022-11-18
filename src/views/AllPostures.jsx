@@ -4,8 +4,15 @@ const Layout = require('./Layout');
 module.exports = function AllPostures({ user, allPoses }) {
   return (
     <Layout user={user} allPoses={allPoses}>
-      {user ? (
-        <div className="mainContainerAll">
+      <div className="container">
+        <div>
+          <img src="https://cdn.dribbble.com/users/406059/screenshots/5254513/media/d182024c546f188ab255a34229374f7a.gif" alt="mainpic" className="main-user-pic" />
+        </div>
+        <div className="divider">
+          <h2 className="divide-text">All yoga postures</h2>
+        </div>
+        <div className="mainContainer">
+
           {allPoses.map((el) => (
             <div id={el.id} className="oneAsanaCard">
               <div className="card">
@@ -13,22 +20,16 @@ module.exports = function AllPostures({ user, allPoses }) {
                 <div className="card-body">
                   <h5 className="card-title">{el.sanskrit_name}</h5>
                   <p className="card-text">{el.english_name}</p>
-                  <button data-userid={user.id} id={el.id} name="addtoseq" type="submit" className="btn btn-primary">Add to my sequence</button>
+                  <button data-userid={user.id} id={el.id} name="addtofav" type="submit" className="btn btn-outline-danger">Add</button>
                 </div>
               </div>
             </div>
           ))}
 
         </div>
-      ) : (
-        <div className="mainContainer">
-          <h5>you have to log in, to see the page</h5>
-
-        </div>
-      )}
-
-      <h1>Привет из вьюшки Main</h1>
-      <script defer src="/js/chooseFromAll.js" />
+      </div>
+      <script defer src="/js/addFavScript.js" />
+      {/* <script defer src="/js/chooseFromAll.js" /> */}
       {/* <script defer src="/js/dragndrop.js" /> */}
     </Layout>
   );

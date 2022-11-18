@@ -4,8 +4,6 @@ const Register = require('../views/Register');
 const { User } = require('../../db/models');
 
 const renderReg = async (req, res) => {
-  // const user = req.session?.user;
-  // const UserID = req.session?.UserID;
   try {
     renderTemplate(Register, {}, res);
   } catch (error) {
@@ -15,7 +13,6 @@ const renderReg = async (req, res) => {
 
 const regUser = async (req, res) => {
   try {
-    console.log('req.bodyyyyyyyyyyyyyyyyyyyyyyyyy', req.body);
     const {
       firstname,
       lastname,
@@ -35,7 +32,6 @@ const regUser = async (req, res) => {
     res.json({
       name: user.firstname,
     });
-    // res.sendStatus(200);
   } catch (error) {
     console.log(error);
   }

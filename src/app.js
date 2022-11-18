@@ -19,6 +19,8 @@ const logoutRouter = require('./routes/logoutRouter');
 const userAccRouter = require('./routes/userAccRouter');
 const favRouter = require('./routes/favRouter');
 const allPosturesRouter = require('./routes/allPosturesRouter');
+const catRouter = require('./routes/allCatsRouter');
+const filterRouter = require('./routes/filterRouter');
 
 app.use(morgan('dev'));
 
@@ -47,7 +49,8 @@ app.use('/logout', logoutRouter);
 app.use('/userpage', userAccRouter);
 app.use('/addtofav', favRouter);
 app.use('/allpostures', allPosturesRouter);
-// app.use('/addtoseq', seqRouter);
+app.use('/allcategories', catRouter);
+app.use('/filter', filterRouter);
 
 app.listen(PORT, () => {
   connectionCheck();

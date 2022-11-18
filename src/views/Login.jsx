@@ -39,7 +39,6 @@ module.exports = function Main({ }) {
         </ul> */}
       </div>
       <script defer src="/js/loginScript.js" />
-      <h1>Привет из вьюшки Login</h1>
     </Layout>
   );
 };

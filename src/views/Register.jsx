@@ -47,7 +47,6 @@ module.exports = function Main({ }) {
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
       </div>
-      <h1>Привет из вьюшки UserAccount</h1>
       <script defer src="/js/regScript.js" />
     </Layout>
   );

@@ -16,21 +16,22 @@
     width: auto;
     display: flex;
     flex-wrap: wrap;
+    max-width: 850px;
 
 }
 
 .card {
     display: inline-block;
-    height: 250px;
-    width: 250px;
-    margin: 10px;
+    height: 200px;
+    width: 200px;
+    margin: 5px;
     border: darkblue 2px solid;
-    background-color: darkslategray;
+    background-color: deepskyblue;
 
 }
 
 .card-body {
-    border: lightseagreen solid 2px;
+    /* border: lightseagreen solid 2px; */
     font-size: smaller;
 }
 
@@ -38,4 +39,94 @@
     pointer-events: none;
     cursor: default;
     color: #888;
+}
+
+.main-nouser-pic {
+    height: auto;
+    width: 100%;
+    max-width: 720px;
+    margin: 150px;
+    border-radius: 5%;
+    border: 1px solid red;
+}
+
+.main-user-pic {
+    height: auto;
+    width: 100%;
+    max-width: 850px;
+    margin: 50px;
+    margin-left: 20px;
+    border-radius: 5%;
+    border: 1px solid lightcoral;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+.welcometext {
+    font-weight: bolder;
+    position: relative;
+    font-variant: small-caps;
+}
+
+.welcomeTxtBox {
+    display: block;
+    margin-left: 150px;
+    margin-top: 50px;
+    width: 200px;
+    position: relative;
+}
+
+.divider {
+    border: 1px solid lightcoral;
+    height: 100px;
+    width: 100%;
+    max-width: 850px;
+    background-color: rgba(207, 173, 19, 0.973);
+    border-left: transparent;
+    border-right: transparent;
+    text-align: center;
+    position: relative;
+
+}
+
+.divide-text {
+    font-variant: small-caps;
+
+
+
+    /*   text-align: center;
+    vertical-align: middle; */
+}
+
+.btn btn-outline-danger {
+    vertical-align: bottom;
+}
+
+.loginContainer {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 850px;
+
+}
+
+.userAccContainer {
+    height: 400px;
+    width: auto;
+    max-width: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+
+}
+
+.useraccpic {
+    height: 250px;
+    width: 380px;
+    top: 0;
 }

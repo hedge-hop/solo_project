@@ -12,6 +12,7 @@ module.exports = function Layout({ children, user }) {
         <link rel="stylesheet" href="/css/publicStyles.css" />
 
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossOrigin="anonymous" />
+
         {/* <script defer src="/js/publicScript.js" /> */}
         <title>Asana</title>
       </head>
@@ -28,7 +29,8 @@ module.exports = function Layout({ children, user }) {
           <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid">
               <a className="navbar-brand mb-0 h1" href="/">
-                <img src="img/sl_051022_50280_34.jpg" alt="Logo" width="30" height="24" className="d-inline-block align-text-top" id="Logo" />
+                <img src="/img/yoga.png" id="Logo" />
+                {/* <img src="https://cdn.dribbble.com/users/9186591/screenshots/19862451/media/c593ad7114f608fe08add8ebf1b0279c.jpg?compress=1&resize=1000x750&vertical=top" alt="Logo" width="30" height="24" className="d-inline-block align-text-top" id="Logo" /> */}
                 YogaDev
               </a>
               {/* <a className="navbar-brand" href="#">Navbar</a> */}
@@ -42,29 +44,32 @@ module.exports = function Layout({ children, user }) {
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="/userpage">
-                      Hi there,
-                      {' '}
                       {user.firstname}
-                      {' '}
-                      !
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="/logout">Sign out</a>
+                    <a className="nav-link" href="/allpostures">Postures</a>
                   </li>
-                  <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Asanas
-                    </a>
-                    <ul className="dropdown-menu">
-                      <li><a className="dropdown-item" href="#">Action</a></li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="/allcategories">Categories</a>
+                  </li>
+
+                  {/* <li className="nav-item dropdown"> */}
+                  {/*  <a className="nav-link dropdown-toggle" href="/allpostures" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      All postures
+                    </a> */}
+                  {/*  <ul className="dropdown-menu">
+                      <li><a className="dropdown-item" href="/allcategories">Categories</a></li>
                       <li><a className="dropdown-item" href="#">Another action</a></li>
                       <li><hr className="dropdown-divider" /></li>
                       <li><a className="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li className="nav-item">
+                    </ul> */}
+                  {/* </li> */}
+                  {/* <li className="nav-item">
                     <a className="nav-link disabled">Disabled</a>
+                  </li> */}
+                  <li className="nav-item">
+                    <a className="nav-link" href="/logout">Sign out</a>
                   </li>
                 </ul>
                 <form className="d-flex" role="search">
@@ -78,7 +83,7 @@ module.exports = function Layout({ children, user }) {
           <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid">
               <a className="navbar-brand mb-0 h1" href="/">
-                <img src="img/sl_051022_50280_34.jpg" alt="Logo" width="30" height="24" className="d-inline-block align-text-top" id="Logo" />
+                <img src="/img/yoga.png" id="Logo" />
                 YogaDev
               </a>
               {/* <a className="navbar-brand" href="#">Navbar</a> */}
@@ -87,37 +92,45 @@ module.exports = function Layout({ children, user }) {
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li className="nav-item">
+                  {/*  <li className="nav-item">
                     <a className="nav-link active" aria-current="page" href="/">Home</a>
-                  </li>
+                  </li> */}
                   <li className="nav-item">
                     <a className="nav-link" href="/login">Sign in</a>
                   </li>
-                  <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Asanas
-                    </a>
-                    <ul className="dropdown-menu">
-                      <li><a className="dropdown-item" href="#">Action</a></li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="/register">Sign up</a>
+                  </li>
+                  {/*  <li className="nav-item">
+                    <a className="nav-link" href="/allpostures">Postures</a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="/allcategories">Categories</a>
+                  </li>
+                  <li className="nav-item dropdown"> */}
+                  {/*  <a className="nav-link dropdown-toggle" href="/allpostures" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      All postures
+                    </a> */}
+                  {/* <ul className="dropdown-menu">
+                      <li><a className="dropdown-item" href="/allcategories">Categories</a></li>
                       <li><a className="dropdown-item" href="#">Another action</a></li>
                       <li><hr className="dropdown-divider" /></li>
                       <li><a className="dropdown-item" href="#">Something else here</a></li>
                     </ul>
-                  </li>
-                  <li className="nav-item">
+                </li> */}
+                  {/* <li className="nav-item">
                     <a className="nav-link disabled">Disabled</a>
-                  </li>
+                  </li> */}
                 </ul>
-                <form className="d-flex" role="search">
+                {/* <form className="d-flex" role="search">
                   <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                   <button className="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                </form> */}
               </div>
             </div>
           </nav>
         )}
 
-        <h1> Привет из Layout</h1>
         {children}
       </body>
     </html>

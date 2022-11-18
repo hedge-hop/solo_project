@@ -4,8 +4,6 @@ const Login = require('../views/Login');
 const { User } = require('../../db/models');
 
 const renderLogin = async (req, res) => {
-  // const user = req.session?.user;
-  // const UserID = req.session?.UserID;
   try {
     renderTemplate(Login, {}, res);
   } catch (error) {
@@ -18,13 +16,11 @@ const postLogin = async (req, res) => {
   try {
     const user = await User.findOne({ where: { email } });
     if (!user) {
-      console.log('user not found');
       res.sendStatus(400);
     }
     if (user) {
       const passCheck = await bcrypt.compare(password, user.password);
       if (!passCheck) {
-        console.log('wrong password');
         res.sendStatus(401);
       } else {
         req.session.user = user.dataValues;
